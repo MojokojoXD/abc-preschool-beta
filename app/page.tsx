@@ -1,103 +1,80 @@
+
 import Image from "next/image";
+import Link from 'next/link';
+import { Button } from './components/ui/button';
+import { MapPin, Clock, Phone } from 'lucide-react';
+import { HomeContactForm } from './components/forms/HomeContactForm';
+import { HomeCarousel } from './components/home-carousel';
 
-export default function Home() {
+export default function Home()
+{
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+    <div className="relative px-10 sm:px-16 lg:px-24 xl:px-84 pt-24 main-background bg-top bg-[100%_200px] lg:bg-cover lg:bg-top xl:bg-contain xl:bg-[center_top_-4.9rem] bg-no-repeat h-[calc(100vh-9rem)]">
+      <div>
+        <div className="relative grid grid-cols-2">
+          <div className='space-y-6 text-zinc-700'>
+            <h1 className='text-5xl font-bold tracking-tight font-gloria-hallelujah'>ABC Building Blocks <br /> Lindon.</h1>
+              <p className='text-2xl/7'>Welcome to preschool, </p>
+            <p className='max-w-lg text-2xl/7'>Here at ABC Building Blocks, we&apos;re passionate about making learning an enjoyable adventure! Your child will explore and discover through engaging hands-on play, delightful music, and exciting monthly field trips. We also understand that every child learns at their own pace, so we tailor our curriculum to meet their individual needs, ensuring they thrive and develop a genuine love for learning.</p>
+          </div>
+          <div className='relative flex items-center'>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <HomeCarousel/>
+            {/* <div className='relative w-full h-fit rounded-b-[3rem] bg-tertiary/80 overflow-hidden'>
+              <div>
+                <div className='px-16 py-10 space-y-8 text-zinc-900'>
+                  <p className='text-2xl'><MapPin className='h-6 w-6  inline mr-2.5 text-nowrap' />1460 N 1300 W Orem UT, 84057, USA </p>
+                  <p className='text-2xl'><Clock className='h-6 w-6  inline mr-2.5' />Open 9am - 3pm, Mon-Fri </p>
+                  <p className='text-2xl'><Phone className='h-6 w-6  inline mr-2.5' />Call to Enroll: 385-254-4399 </p>
+
+                </div>
+                <div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6083.709309417932!2d-111.72940062347297!3d40.32338316131463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d84e895d53d5b%3A0x7342f372a267c1f!2s1460%20N%201300%20W%2C%20Orem%2C%20UT%2084057!5e0!3m2!1sen!2sus!4v1741794853658!5m2!1sen!2sus" allowFullScreen={ false } loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='w-full h-80'></iframe>
+                </div>
+
+
+              </div>
+            </div> */}
+          </div>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        
+      </div>
+      </div>
+      <div className='pb-16 space-y-16 px-10 sm:px-16 lg:px-24 xl:px-84'>
+        <h1 className='text-5xl font-bold text-zinc-800 tracking-tight'>Programs</h1>
+        <div className='grid grid-cols-2 w-fit gap-6'>
+          <Link href={ '/programs?scroll=__3-4program' } className='group'>
+            <div className='h-80 aspect-square rounded-3xl bg-teal-400 flex flex-col overflow-hidden shadow'>
+              <div className='relative basis-3/4 overflow-hidden'>
+                <Image src={ '/kids-3-4years.jpg' } fill alt='3 to 4 year old boy and girl' className='scale-100 object-cover object-[50%_25%] group-hover:scale-110 transition-all' />
+              </div>
+              <div className='flex justify-center items-center basis-1/4'>
+                <h2 className='text-2xl font-bold text-zinc-900'> 3 & 4 years</h2>
+              </div>
+            </div>
+          </Link>
+          <Link href={ '/programs?scroll=__4-5program' } className='group'>
+            <div className='h-80 aspect-square rounded-3xl bg-primary/80 flex flex-col overflow-hidden shadow'>
+              <div className='relative basis-3/4 overflow-hidden'>
+                <Image src={ '/kids-4-5years.jpg' } fill alt='3 to 4 year old boy and girl' className='scale-100 object-cover object-[50%_25%] group-hover:scale-110 transition-all' />
+              </div>
+              <div className='flex justify-center items-center basis-1/4'>
+                <h2 className='text-2xl font-bold text-zinc-900'> 4 & 5 years</h2>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+      <div className='pt-16 pb-40 space-y-16 px-10 sm:px-16 lg:px-24 xl:px-84'>
+        <div className='space-y-6'>
+          <h1 className='text-5xl font-bold text-zinc-800 tracking-tight'>Get In Touch</h1>
+          <p className='max-w-prose text-zinc-700 text-2xl/7'>Please enter your information below and we&apos;ll get in touch at the earliest. </p>
+        </div>
+        <HomeContactForm />
+      </div>
+    </>
   );
 }
