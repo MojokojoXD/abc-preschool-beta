@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import { ContactForm } from './components/forms/ContactForm';
 import { HomeCarousel } from './components/home/home-carousel';
-import { GetMoreInfoBtn } from './components/home/GetMoreInfo/page';
+import { GetMoreInfoBtn } from './components/home/GetMoreInfo';
 
 export default function Home()
 {

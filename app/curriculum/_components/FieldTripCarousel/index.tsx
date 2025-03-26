@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 
-const carouselPicClsx = 'relative h-[450px] w-full rounded-bl-3xl overflow-hidden'
+const carouselPicClsx = 'relative h-[400px] w-full rounded-bl-3xl overflow-hidden'
 
 export function FieldTripCarousel()
 {

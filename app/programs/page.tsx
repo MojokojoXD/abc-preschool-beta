@@ -5,14 +5,18 @@ import { Button } from '@/components/ui/button';
 import { CircleCheck } from 'lucide-react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
+
 export default function Programs()
 {
 
-  const scrollLocation = useSearchParams().get( 'scroll' );
+  const searchParams = useSearchParams();
   const router = useRouter();
   
     useEffect( () =>
     {
+
+      const scrollLocation = searchParams.get( 'scroll' );
+
       if ( !scrollLocation ) return;
   
       const locationElement = document.getElementById( scrollLocation )!;
@@ -23,7 +27,7 @@ export default function Programs()
   
       window.scrollTo({ 'top': locationHeightX - navHeight , 'behavior': 'smooth' })
   
-    },[ scrollLocation ])
+    },[searchParams])
   
   return (
     <div className='min-h-[calc(100vh-9rem)]'>

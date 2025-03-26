@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from 'react';
 import { Comic_Neue,Gloria_Hallelujah } from "next/font/google";
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
@@ -6,12 +7,14 @@ import "./globals.css";
 
 const comicNeue = Comic_Neue( {
   variable: '--font-comic-neue',
-  weight: [ '300', '400', '700' ]
+  weight: [ '300', '400', '700' ],
+  subsets:['latin']
 } );
 
 const gloriaHallelujah = Gloria_Hallelujah( {
   variable: '--font-stardos-stencil',
-  weight: ['400']
+  weight: [ '400' ],
+  preload: false
 })
 
 export const metadata: Metadata = {
@@ -33,7 +36,9 @@ export default function RootLayout( {
         <Navbar />
         <main className='absolute top-[6rem] lg:top-[9rem] w-full '>
           <div className='min-h-[calc(100vh-9rem)]'>
-            { children }
+            <Suspense fallback={<div>...loading</div>}>
+              { children }  
+            </Suspense>
           </div>
           <Footer />
         </main>

@@ -16,7 +16,7 @@ export default function About()
         <div  className='shadow-sm flex justify-center bg-white min-h-screen'>
           <div className='text-2xl text-justify space-y-8 max-w-prose py-36'>
             <div className='relative h-70 w-70 aspect-square rounded-3xl overflow-hidden mx-auto inline-block float-left mr-8'>
-              <Image src={ '/about/julia-portrait.jpg' } alt='3 year olds playing' fill className='object-cover object-[50%_25%]' />
+              <Image src={ '/assets/about/julia-portrait.jpg' } alt='3 year olds playing' fill className='object-cover object-[50%_25%]' />
             </div>
             <p className='inline'>Hi there! I&apos;m Julia Boakye-Yiadom, and I truly love working with young children. My teaching journey started six years ago at Rocky Mountain Elementary Pre-K, where I was a teacher&apos;s aide. From there, I gained valuable experience supporting special needs students at Foothill Elementary and then spent time as a substitute teacher in various preschools and daycares around Utah. All of these experiences have prepared me well for my favorite role yet – leading my own preschool, which is now in its second year!</p>
             <br />
