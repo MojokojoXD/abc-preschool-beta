@@ -3,11 +3,13 @@
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { CircleCheck } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
+
 export default function Programs()
 {
 
   const scrollLocation = useSearchParams().get( 'scroll' );
+  const router = useRouter();
   
     useEffect( () =>
     {
@@ -24,16 +26,16 @@ export default function Programs()
     },[ scrollLocation ])
   
   return (
-    <div className='min-h-[calc(100vh-9rem)] pb-28'>
-      <header className='h-[60vh] bg-[url("/programs-cover.jpg")] bg-cover bg-fixed bg-[0%_20%]'>
+    <div className='min-h-[calc(100vh-9rem)]'>
+      <header className='h-[60vh] bg-[url("/assets/programs/cover.webp")] bg-cover bg-center bg-fixed bg-[0%_20%]'>
         <div className='h-full bg-black/60 flex items-center px-10 sm:px-16 lg:px-24 xl:px-84'>
           <h1 className='text-6xl font-bold text-white tracking-tight'>Programs</h1>
         </div>
       </header>
-      <div className='px-10 sm:px-16 lg:px-24 xl:px-84 py-28 space-y-16 text-zinc-700'>
+      <div className='px-10 sm:px-16 lg:px-24 xl:px-84 space-y-16 text-zinc-700'>
 
-        <div className='grid grid-cols-3 gap-5'>
-          <div className='space-y-8 text-2xl bg-teal-400 rounded-3xl py-14 px-12 text-center shadow flex flex-col justify-between' id='__3-4program'>
+        <div className='grid grid-cols-3 gap-5 bg-white pt-28 px-5 pb-40 shadow-sm'>
+          <div className='space-y-8 text-2xl bg-teal-400 rounded-3xl py-14 px-12 text-center flex flex-col justify-between' id='__3-4program'>
             <h2 className='text-4xl font-bold'>3 & 4 <br /><span className='text-lg'>(Two years prior to kindergarten)</span></h2>
             <div className='space-y-8'>
             <p>Tue/Thur 9:15am - 11:45am</p>
@@ -46,11 +48,13 @@ export default function Programs()
             </div>
             <div className='space-y-4 h-40 flex flex-col border-t border-zinc-700/30 justify-center'>
 
-              <Button className='block w-full text-2xl' size={ 'lg' } variant={ 'dark' }>Contact Us</Button>
-              <Button className='w-full block text-inherit text-2xl underline' size={ 'lg' } variant={ 'link' }>View Curriculum</Button>
+              <Button className='block w-full text-2xl' size={ 'lg' } variant={ 'dark' } onClick={() => router.push('/contact')}>
+                Contact Us
+              </Button>
+              <Button className='w-full block text-inherit text-2xl underline' size={ 'lg' } variant={ 'link' } onClick={() => router.push('/curriculum?scroll=__3-4')}>View Curriculum</Button>
             </div>
           </div>
-          <div className='space-y-8 text-2xl bg-primary/80 rounded-3xl py-14 px-12 text-center shadow flex flex-col justify-between' id='__4-5program'>
+          <div className='space-y-8 text-2xl bg-primary/80 rounded-3xl py-14 px-12 text-center flex flex-col justify-between' id='__4-5program'>
             <h2 className='text-4xl font-bold'>4 & 5 <br /><span className='text-lg'>(One year prior to kindergarten)</span></h2>
             <div className='space-y-8'>
             <p>Mon/Wed/Fri 9:15am - 11:45am</p>
@@ -63,11 +67,11 @@ export default function Programs()
             </div>
             <div className='space-y-4 h-40 flex flex-col border-t border-zinc-700/30 justify-center'>
             
-            <Button className='block w-full text-2xl' size={'lg'} variant={'dark'}>Contact Us</Button>
-            <Button className='w-full block text-inherit text-2xl underline' size={'lg'} variant={'link'}>View Curriculum</Button>    
+            <Button className='block w-full text-2xl' size={'lg'} variant={'dark'} onClick={() => router.push('/contact')}>Contact Us</Button>
+            <Button className='w-full block text-inherit text-2xl underline' size={'lg'} variant={'link'} onClick={() => router.push('/curriculum?scroll=__4-5')}>View Curriculum</Button>    
             </div>
           </div>
-          <div className='space-y-8 text-2xl bg-white border rounded-3xl py-14 px-12 shadow'>
+          <div className='space-y-8 text-2xl py-14 px-12'>
             {/* <h2 className='text-4xl font-bold'>4 & 5 <br /><span className='text-lg'>(One year prior to kindergarten)</span></h2> */}
             <p>* The registration fee includes:</p>
             <ul className='space-y-8 list-inside'>

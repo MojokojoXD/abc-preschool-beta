@@ -16,7 +16,7 @@ const USEFUL_LINKS = [
   {
     id: 2,
     name: 'Contact Us',
-    href: '/contact-us',
+    href: '/contact',
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const USEFUL_LINKS = [
   {
     id: 4,
     name: 'Curriculum',
-    href: '/classes-pricing',
+    href: '/curriculum',
   },
 ];
 export function Footer()

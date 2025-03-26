@@ -30,7 +30,7 @@ export const NAVLINKS = [
   {
     id: 4,
     name: 'Contact Me',
-    href: '/contact-me'
+    href: '/contact'
   }
 ]
 export function Navbar()
