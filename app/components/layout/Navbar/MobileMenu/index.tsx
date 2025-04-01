@@ -38,7 +38,7 @@ function MobileDrawer( { toggleDrawer, onDrawerToggle }: MobileDrawerProps )
     <Drawer
       open={ toggleDrawer }
       onOpenChange={ onDrawerToggle }
-      direction={ 'top' }
+      direction={ 'bottom' }
     >
       <DrawerContent className='p-10 w-screen'>
         <DrawerHeader>

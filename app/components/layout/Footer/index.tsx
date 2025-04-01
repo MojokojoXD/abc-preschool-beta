@@ -36,9 +36,9 @@ export function Footer()
       <div className='h-36 flex justify-center items-center text-3xl sm:text-4xl font-bold text-white bg-zinc-700 sm:px-16 lg:px-24 xl:px-84'>
         Come Visit Us <Smile className='h-10 w-10 ml-2.5' />
       </div>
-      <div className='min-h-96 sm:px-16 lg:px-24 xl:px-84 bg-primary/10 text-zinc-700'>
+      <div className='min-h-96 sm:px-16 lg:px-24 xl:px-84 bg-yellow-100 text-zinc-700'>
         <div className='grid sm:grid-cols-2'>
-          <div className='sm:py-24'>
+          <div className='sm:py-24 hidden sm:block'>
             <Link href={ '/' }>
               <Image src={ '/logo2.png' } alt='footer logo' height={ 300 } width={ 300 } className='object-fit'/>
             </Link>
@@ -82,7 +82,7 @@ export function Footer()
           </div>
         </div>
         <div className='p-6 flex justify-center'>
-          <small className='text-sm sm:text- text-center sm:text-left'>Copyright &copy; 2025 ABC Building Blocks Preschool USA. All Rights Reserved.</small>
+          <small className='text-sm sm:text-lg text-center sm:text-left'>Copyright &copy; 2025 ABC Building Blocks Preschool USA. All Rights Reserved.</small>
         </div>
       </div>
     </footer>

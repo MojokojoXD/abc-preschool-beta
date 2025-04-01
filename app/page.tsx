@@ -4,16 +4,17 @@ import Link from 'next/link';
 import { ContactForm } from './components/forms/ContactForm';
 import { HomeCarousel } from './components/home/home-carousel';
 import { GetMoreInfoBtn } from './components/home/GetMoreInfo';
+import { Reveal } from './components/ui/reveal';
 
 export default function Home()
 {
 
   return (
     <>
-      <div className="relative sm:px-16 lg:px-24 xl:px-84 pt-16 sm:pt-24 sm:main-background lg:bg-cover lg:bg-top xl:bg-contain xl:bg-[center_top_-4.9rem] bg-no-repeat sm:h-[calc(100vh-9rem)]">
-        <div>
+      <div className="relative sm:px-16 lg:px-24 xl:px-56">
+        <div className='main-background bg-white bg-contain sm:bg-[auto_37%] bg-no-repeat px-1 py-20 sm:pt-24 sm:pb-56 space-y-16 sm:space-y-32 sm:px-28'>
           <div className="relative grid sm:grid-cols-2">
-            <div className='space-y-8 sm:space-y-0 text-zinc-700 px-1'>
+            <div className='space-y-8 sm:space-y-0 text-zinc-700'>
               <div>
                 <h1 className='text-4xl sm:text-5xl font-bold tracking-tight px-5 sm:px-0 text-center sm:text-left'>ABC Building Blocks <br /> Lindon.</h1>
               </div>
@@ -21,10 +22,12 @@ export default function Home()
                 <div className='sm:hidden overflow-hidden'>
                   <HomeCarousel />
                 </div>
-                <div className='rounded-b-xl sm:rounded-b-none px-8 py-8 sm:px-0 space-y-4 space-y-8 sm:space-y-6 bg-sky-200/90 sm:bg-transparent'>
-                  <p className='text-xl sm:text-2xl'>Welcome to preschool, </p>
-                  <p className='text-xl max-w-lg sm:text-2xl/7'>Here at ABC Building Blocks, we&apos;re passionate about making learning an enjoyable adventure! Your child will explore and discover through engaging hands-on play, delightful music, and exciting monthly field trips. We also understand that every child learns at their own pace, so we tailor our curriculum to meet their individual needs, ensuring they thrive and develop a genuine love for learning.</p>
-                  <GetMoreInfoBtn />
+                <div className='rounded-b-xl sm:rounded-b-none px-8 py-8 sm:px-0  sm:space-y-6 bg-zinc-100 shadow sm:shadow-none   sm:bg-transparent'>
+                  <Reveal className='space-y-4 space-y-8'>
+                    <p className='text-xl sm:text-2xl'>Welcome to preschool, </p>
+                    <p className='text-xl max-w-lg sm:text-2xl/7'>Here at ABC Building Blocks, we&apos;re passionate about making learning an enjoyable adventure! Your child will explore and discover through engaging hands-on play, delightful music, and exciting monthly field trips. We also understand that every child learns at their own pace, so we tailor our curriculum to meet their individual needs, ensuring they thrive and develop a genuine love for learning.</p>
+                    <GetMoreInfoBtn />
+                  </Reveal>
                 </div>
               </div>
             </div>
@@ -49,41 +52,42 @@ export default function Home()
             </div>
 
           </div>
-
-        </div>
-      </div>
-      <div className='pt-16 sm:pt-0 sm:pb-16 space-y-8 sm:space-y-16 px-5 sm:px-16 lg:px-24 xl:px-84'>
-        <h1 className='text-4xl sm:text-5xl font-bold text-zinc-800 tracking-tight text-center sm:text-left'>Programs</h1>
-        <div className='grid sm:grid-cols-2 sm:w-fit gap-6'>
-          <Link href={ '/programs?scroll=__3-4program' } className='group'>
-            <div className='sm:h-80 aspect-square rounded-xl sm:rounded-3xl bg-teal-400 flex flex-col overflow-hidden shadow'>
-              <div className='relative basis-3/4 overflow-hidden'>
-                <Image src={ '/assets/home/3-4_program.webp' } fill alt='3 to 4 year old boy and girl' className='scale-100 object-cover object-[50%_25%] group-hover:scale-110 transition-all' />
-              </div>
-              <div className='flex justify-center items-center basis-1/4'>
-                <h2 className='text-2xl font-bold text-zinc-900'> 3 & 4 years</h2>
-              </div>
+          <div className='space-y-16 px-5 sm:px-0'>
+            <h1 className='text-4xl sm:text-5xl font-bold text-zinc-800 tracking-tight text-center sm:text-left'>Programs</h1>
+            <div className='grid sm:grid-cols-2 sm:w-fit gap-6'>
+              <Reveal>
+                <Link href={ '/programs?scroll=__3-4program' } className='group'>
+                  <div className='sm:h-80 aspect-square rounded-xl sm:rounded-3xl bg-teal-400 flex flex-col overflow-hidden shadow'>
+                    <div className='relative basis-3/4 overflow-hidden'>
+                      <Image src={ '/assets/home/3-4_program.webp' } fill alt='3 to 4 year old boy and girl' className='scale-100 object-cover object-[50%_25%] group-hover:scale-110 transition-all' />
+                    </div>
+                    <div className='flex justify-center items-center basis-1/4'>
+                      <h2 className='text-2xl font-bold text-zinc-900'> 3 & 4 years</h2>
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
+              <Reveal>
+                <Link href={ '/programs?scroll=__4-5program' } className='group'>
+                  <div className='sm:h-80 aspect-square rounded-xl sm:rounded-3xl bg-primary/80 flex flex-col overflow-hidden shadow'>
+                    <div className='relative basis-3/4 overflow-hidden'>
+                      <Image src={ '/assets/home/4-5_program.webp' } fill alt='3 to 4 year old boy and girl' className='scale-100 object-cover object-[50%_25%] group-hover:scale-110 transition-all' />
+                    </div>
+                    <div className='flex justify-center items-center basis-1/4'>
+                      <h2 className='text-2xl font-bold text-zinc-900'> 4 & 5 years</h2>
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
             </div>
-          </Link>
-          <Link href={ '/programs?scroll=__4-5program' } className='group'>
-            <div className='sm:h-80 aspect-square rounded-xl sm:rounded-3xl bg-primary/80 flex flex-col overflow-hidden shadow'>
-              <div className='relative basis-3/4 overflow-hidden'>
-                <Image src={ '/assets/home/4-5_program.webp' } fill alt='3 to 4 year old boy and girl' className='scale-100 object-cover object-[50%_25%] group-hover:scale-110 transition-all' />
-              </div>
-              <div className='flex justify-center items-center basis-1/4'>
-                <h2 className='text-2xl font-bold text-zinc-900'> 4 & 5 years</h2>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </div>
-      <div className='pt-16 pb-40 space-y-8 sm:space-y-16 px-5 sm:px-16 lg:px-24 xl:px-84' id='__get-more-info'>
-        <div className='space-y-6'>
-          <h1 className='text-4xl sm:text-5xl font-bold text-zinc-800 tracking-tight text-center sm:text-left'>Get In Touch</h1>
-          <p className='max-w-prose text-zinc-700 text-xl sm:text-2xl/7'>Please enter your information below and we&apos;ll get in touch at the earliest. </p>
-        </div>
-        <div >
-          <ContactForm columns={ 'double' } />
+          </div>
+          <div className='space-y-16 px-5 sm:px-0' id='__get-more-info'>
+              <h1 className='text-4xl sm:text-5xl font-bold text-zinc-800 tracking-tight text-center sm:text-left'>Get In Touch</h1> 
+            <Reveal className='space-y-8'  >
+              <p className='max-w-prose text-zinc-700 text-xl sm:text-2xl/7'>Please enter your information below and we&apos;ll get in touch at the earliest. </p>
+              <ContactForm columns={ 'double' } />
+            </Reveal>
+          </div>
         </div>
       </div>
     </>

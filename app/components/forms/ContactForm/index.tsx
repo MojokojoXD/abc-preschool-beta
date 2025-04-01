@@ -76,13 +76,13 @@ export function ContactForm( { columns }: ContactFormProps )
 
       if ( res.ok )
       {
-        console.log( 'done' )
+        setIsFormSubmissionSuccessful( { openDialog: true, isSuccessful: true } );
+        reset();
         return;
       };
 
-      // throw res;
-      setIsFormSubmissionSuccessful({ openDialog: true, isSuccessful: true })
-      reset();
+      throw res;
+     
     } catch ( error )
     {
       console.log( error );
@@ -169,7 +169,7 @@ export function ContactForm( { columns }: ContactFormProps )
       </div>
       <div className={ clsx( 'grid gap-3 sm:gap-6', columns === 'double' && 'sm:grid-cols-2' ) }>
         <div className='space-y-2.5'>
-          <Label htmlFor='__comments' className='ml-3 sm:ml-6'>Comment</Label>
+          <Label htmlFor='__comments' className='ml-3 sm:ml-6'>Comments</Label>
           <Textarea
             id='__comments'
             rows={ 6 }
