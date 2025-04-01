@@ -13,7 +13,7 @@ export function MobileMenu()
   const handleDrawerOpen = ( toggle: boolean ) => setOpenDrawer( toggle );
 
   return (
-    <div className='lg:hidden'>
+    <div className='lg:hidden mr-5'>
       <Button
         variant={ 'ghost' }
         size={ 'icon' }
@@ -40,7 +40,7 @@ function MobileDrawer( { toggleDrawer, onDrawerToggle }: MobileDrawerProps )
       onOpenChange={ onDrawerToggle }
       direction={ 'top' }
     >
-      <DrawerContent className='p-10'>
+      <DrawerContent className='p-10 w-screen'>
         <DrawerHeader>
           <DrawerTitle className='hidden'></DrawerTitle>
           <DrawerDescription className='hidden'></DrawerDescription>

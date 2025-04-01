@@ -31,14 +31,14 @@ export default function Programs()
   
   return (
     <div className='min-h-[calc(100vh-9rem)]'>
-      <header className='h-[60vh] bg-[url("/assets/programs/cover.webp")] bg-cover bg-center bg-fixed bg-[0%_20%]'>
+      <header className='h-[20vh] sm:h-[60vh] bg-[url("/assets/programs/cover.webp")] bg-contain sm:bg-cover bg-center bg-fixed sm:bg-[0%_20%]'>
         <div className='h-full bg-black/60 flex items-center px-10 sm:px-16 lg:px-24 xl:px-84'>
-          <h1 className='text-6xl font-bold text-white tracking-tight'>Programs</h1>
+          <h1 className='text-4xl sm:text-6xl font-bold text-white tracking-tight'>Programs</h1>
         </div>
       </header>
-      <div className='px-10 sm:px-16 lg:px-24 xl:px-84 space-y-16 text-zinc-700'>
+      <div className='px-1 sm:px-16 lg:px-24 xl:px-84 space-y-16 text-zinc-700'>
 
-        <div className='grid grid-cols-3 gap-5 bg-white pt-28 px-5 pb-40 shadow-sm'>
+        <div className='grid sm:grid-cols-3 gap-5 bg-white pt-16 sm:pt-28 px-5 pb-40 shadow-sm'>
           <div className='space-y-8 text-2xl bg-teal-400 rounded-3xl py-14 px-12 text-center flex flex-col justify-between' id='__3-4program'>
             <h2 className='text-4xl font-bold'>3 & 4 <br /><span className='text-lg'>(Two years prior to kindergarten)</span></h2>
             <div className='space-y-8'>
@@ -75,7 +75,7 @@ export default function Programs()
             <Button className='w-full block text-inherit text-2xl underline' size={'lg'} variant={'link'} onClick={() => router.push('/curriculum?scroll=__4-5')}>View Curriculum</Button>    
             </div>
           </div>
-          <div className='space-y-8 text-2xl py-14 px-12'>
+          <div className='space-y-8 text-xl sm:text-2xl py-14 px-12'>
             {/* <h2 className='text-4xl font-bold'>4 & 5 <br /><span className='text-lg'>(One year prior to kindergarten)</span></h2> */}
             <p>* The registration fee includes:</p>
             <ul className='space-y-8 list-inside'>

@@ -5,6 +5,8 @@ import type { CarouselApi } from '../../ui/carousel';
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../../ui/carousel';
 
+
+const carouselClx = 'relative h-[20rem] sm:h-[30rem] w-full rounded-t-xl sm:rounded-[3rem] overflow-hidden';
 export function HomeCarousel()
 {
   const [ carouselApi, setCarouselApi ] = useState<CarouselApi>();
@@ -58,33 +60,33 @@ export function HomeCarousel()
     >
       <CarouselContent >
         <CarouselItem  >
-          <div className='relative h-[30rem] w-full rounded-[3rem] overflow-hidden'>
+          <div className={carouselClx}>
             <Image src={ '/assets/home/carousel-1.webp' } alt='sensory table' fill className='object-cover' />
           </div>
         </CarouselItem>
         <CarouselItem  >
-          <div className='relative h-[30rem] w-full rounded-[3rem] overflow-hidden'>
+          <div className={carouselClx}>
             <Image src={ '/assets/home/carousel-2.webp' } alt='kids on a swing' fill className='object-cover' />
           </div>
         </CarouselItem>
         <CarouselItem  >
-          <div className='relative h-[30rem] w-full rounded-[3rem] overflow-hidden'>
+          <div className={carouselClx}>
             <Image src={ '/assets/home/carousel-3.jpg' } alt='kids playing outside' fill className='object-cover' />
           </div>
         </CarouselItem>
         <CarouselItem  >
-          <div className='relative h-[30rem] w-full rounded-[3rem] overflow-hidden'>
+          <div className={carouselClx}>
             <Image src={ '/assets/home/carousel-4.webp' } alt='kid mashing apple' fill className='object-cover' />
           </div>
         </CarouselItem>
         <CarouselItem  >
-          <div className='relative h-[30rem] w-full rounded-[3rem] overflow-hidden'>
+          <div className={carouselClx}>
             <Image src={ '/assets/home/carousel-5.webp' } alt='kid looking at worm' fill className='object-cover' />
           </div>
         </CarouselItem>
       </CarouselContent>
       <CarouselPrevious
-        className='bg-zinc-700 h-16 w-16 border-transparent hover:bg-zinc-700/90 -left-20 text-white hover:text-white'
+        className='bg-zinc-700 h-16 w-16 border-transparent hover:bg-zinc-700/90 -left-8 pl-6 sm:pl-0 sm:-left-20 text-white hover:text-white'
         onClick={ () =>
         {
           carouselApi?.scrollPrev();
@@ -92,7 +94,7 @@ export function HomeCarousel()
         } }
       />
       <CarouselNext
-        className='bg-zinc-700 h-16 w-16 border-transparent hover:bg-zinc-700/90 -right-20 text-white hover:text-white'
+        className='bg-zinc-700 h-16 w-16 border-transparent hover:bg-zinc-700/90 -right-8 pr-6 sm:pr-0 sm:-right-20 text-white hover:text-white'
         onClick={ () =>
         {
           carouselApi?.scrollNext();

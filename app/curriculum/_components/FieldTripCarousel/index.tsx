@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 
-const carouselPicClsx = 'relative h-[400px] w-full rounded-bl-3xl overflow-hidden'
+const carouselPicClsx = 'relative h-[440px] w-full rounded-br-3xl overflow-hidden'
 
 export function FieldTripCarousel()
 {
@@ -17,7 +17,7 @@ export function FieldTripCarousel()
   {
     if ( intervalID ) clearInterval( intervalID );
 
-    const id = setInterval( () => carouselApi?.scrollNext(), 4000 );
+    const id = setInterval( () => carouselApi?.scrollNext(), 2000 );
 
     setIntervalID( id );
   };
@@ -33,7 +33,7 @@ export function FieldTripCarousel()
     };
 
 
-    const id = setInterval( carouselScollFn, 4000 );
+    const id = setInterval( carouselScollFn, 2000 );
 
     setIntervalID( id );
 
@@ -53,7 +53,7 @@ export function FieldTripCarousel()
 
   return (
     <Carousel
-      className='w-full z-[5]'
+      className='w-full'
       setApi={ setCarouselApi }
       opts={ {
         loop: true,
@@ -62,7 +62,7 @@ export function FieldTripCarousel()
       <CarouselContent >
         <CarouselItem  >
           <div className={carouselPicClsx}>
-            <Image src={ '/assets/curriculum/carousel/pic_1.webp' } alt='field trip 1' fill className='object-cover object-top' />
+            <Image src={ '/assets/curriculum/carousel/pic_1.webp' } alt='field trip 1' fill className='object-cover' />
           </div>
         </CarouselItem>
         <CarouselItem  >
@@ -77,7 +77,27 @@ export function FieldTripCarousel()
         </CarouselItem>
         <CarouselItem  >
           <div className={carouselPicClsx}>
-            <Image src={ '/assets/curriculum/carousel/pic_4.jpg' } alt='kid at post office' fill className='object-cover' />
+            <Image src={ '/assets/curriculum/carousel/pic_4.webp' } alt='kid at post office' fill className='object-cover' />
+          </div>
+        </CarouselItem>
+        <CarouselItem  >
+          <div className={carouselPicClsx}>
+            <Image src={ '/assets/curriculum/carousel/pic_5.jpg' } alt='kid at post office' fill className='object-cover' />
+          </div>
+        </CarouselItem>
+        <CarouselItem  >
+          <div className={carouselPicClsx}>
+            <Image src={ '/assets/curriculum/carousel/pic_6.webp' } alt='kid at post office' fill className='object-cover' />
+          </div>
+        </CarouselItem>
+        <CarouselItem  >
+          <div className={carouselPicClsx}>
+            <Image src={ '/assets/curriculum/carousel/pic_7.jpg' } alt='kid at post office' fill className='object-cover object-[50%_70%]' />
+          </div>
+        </CarouselItem>
+        <CarouselItem  >
+          <div className={carouselPicClsx}>
+            <Image src={ '/assets/curriculum/carousel/pic_8.webp' } alt='kid at post office' fill className='object-cover' />
           </div>
         </CarouselItem>
       </CarouselContent>

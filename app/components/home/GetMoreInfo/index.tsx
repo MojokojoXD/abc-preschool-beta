@@ -19,7 +19,7 @@ export function GetMoreInfoBtn()
   }
 
   return (
-    <Button size={ 'xl' } variant={ 'dark' } onClick={ handleLocationChange }>
+    <Button size={ 'xl' } variant={ 'dark' } onClick={ handleLocationChange } className='w-full sm:w-fit'>
       Get More Info
     </Button>
   )

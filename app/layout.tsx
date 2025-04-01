@@ -34,7 +34,7 @@ export default function RootLayout( {
         className={ `${ comicNeue.className } ${ gloriaHallelujah.variable } antialiased relative` }
       >
         <Navbar />
-        <main className='absolute top-[6rem] lg:top-[9rem] w-full '>
+        <main className='absolute top-[6rem] lg:top-[9rem] w-full'>
           <div className='min-h-[calc(100vh-9rem)]'>
             <Suspense fallback={<div>...loading</div>}>
               { children }  
