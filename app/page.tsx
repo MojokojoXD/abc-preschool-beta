@@ -22,7 +22,7 @@ export default function Home()
                 <div className='sm:hidden overflow-hidden'>
                   <HomeCarousel />
                 </div>
-                <div className='rounded-b-xl sm:rounded-b-none px-8 py-8 sm:px-0  sm:space-y-6 bg-zinc-100 shadow sm:shadow-none   sm:bg-transparent'>
+                <div className='rounded-b-xl sm:rounded-b-none px-8 py-8 sm:px-0  sm:space-y-6 bg-radial from-zinc-50 from-60% to-zinc-100 shadow sm:shadow-none   sm:bg-none'>
                   <Reveal className='space-y-4 space-y-8'>
                     <p className='text-xl sm:text-2xl'>Welcome to preschool, </p>
                     <p className='text-xl max-w-lg sm:text-2xl/7'>Here at ABC Building Blocks, we&apos;re passionate about making learning an enjoyable adventure! Your child will explore and discover through engaging hands-on play, delightful music, and exciting monthly field trips. We also understand that every child learns at their own pace, so we tailor our curriculum to meet their individual needs, ensuring they thrive and develop a genuine love for learning.</p>

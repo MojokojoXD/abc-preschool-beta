@@ -22,7 +22,7 @@ export default function Curriculum()
   return (
     <div >
       <header className='h-[30vh] sm:h-[60vh] bg-[url("/curriculum-cover.jpg")] bg-cover bg-center sm:bg-fixed bg-[0%_20%]'>
-        <div className='h-full bg-black/40 flex items-center justify-center sm:justify-start px-10 sm:px-16 lg:px-24 xl:px-84'>
+        <div className='h-full bg-black/45 flex items-center justify-center sm:justify-start px-10 sm:px-16 lg:px-24 xl:px-84'>
           <h1 className='text-4xl sm:text-6xl font-bold text-white tracking-tight'>Curriculum</h1>
         </div>
       </header>

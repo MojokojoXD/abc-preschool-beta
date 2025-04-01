@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { Comic_Neue,Gloria_Hallelujah } from "next/font/google";
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
+import { Loading } from './components/ui/loading';
 import "./globals.css";
 
 const comicNeue = Comic_Neue( {
@@ -36,8 +37,8 @@ export default function RootLayout( {
         <Navbar />
         <main className='absolute top-[6rem] lg:top-[9rem] w-full contours h-[calc(100vh-6vh)] lg:h-[calc(100vh-9rem)] bg-[auto_100vh] overflow-y-auto' id='__main'>
           <div >
-            <Suspense fallback={<div>...loading</div>}>
-              { children }  
+            <Suspense fallback={<Loading/>}>
+              { children }
             </Suspense>
           </div>
           <Footer />
