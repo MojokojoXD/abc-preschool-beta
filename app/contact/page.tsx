@@ -8,7 +8,7 @@ export default function About()
 
   return (
     <div >
-      <header className='h-[22.5vh] sm:h-[60vh] bg-[url("/assets/contact/cover.webp")] bg-contain sm:bg-cover bg-center bg-fixed bg-[0%_20%]'>
+      <header className='h-[25vh] sm:h-[60vh] bg-[url("/assets/contact/cover.webp")] bg-cover bg-center sm:bg-fixed bg-[0%_20%]'>
         <div className='h-full bg-black/60 flex items-center justify-center sm:justify-start px-10 sm:px-16 lg:px-24 xl:px-84'>
           <h1 className='text-4xl sm:text-6xl font-bold text-white tracking-tight'>Contact Me</h1>
         </div>
