@@ -68,7 +68,7 @@ export function Footer()
                   </div>
                 </li>
                 <li>
-                  <p className='text-zinc-500 underline' onClick={ () => window.open('mailto:inquires@abcbuildingblockspreschool.org')}>inquires@abcbuildingblockspreschool.org</p>
+                  <p className='text-zinc-500 underline cursor-pointer' onClick={ () => window.open('mailto:inquires@abcbuildingblockspreschool.org','_blank')}>inquires@abcbuildingblockspreschool.org</p>
                 </li>
                 <li>
                   <div className='flex items-center'>
@@ -77,7 +77,7 @@ export function Footer()
                   </div>
                 </li>
                 <li>
-                  <p className='text-zinc-500 underline' onClick={() => window.open('tel:3852544399')}>385-254-4399</p>
+                  <p className='text-zinc-500 underline cursor-pointer' onClick={() => window.open('tel:3852544399','_blank')}>385-254-4399</p>
                 </li>
               </ul>
             </div>

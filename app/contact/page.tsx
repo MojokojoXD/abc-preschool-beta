@@ -28,11 +28,11 @@ export default function About()
                 </div>
                 <div className='flex items-center space-x-2.5'>
                   <Clock className='h-4 w-4 sm:h-6 sm:w-6 text-nowrap' />
-                  <p>Open 9am - 3pm, Mon-Fri </p>
+                  <p>Open 9am - 12pm, Mon-Fri </p>
                 </div>
                 <div className='flex items-center space-x-2.5'>
                   <Phone className='h-4 w-4 sm:h-6 sm:w-6 text-nowrap' />
-                  <p>Call to Enroll: 385-254-4399 </p>
+                  <p>Call to Enroll: <span className='underline cursor-pointer' onClick={ () => window.open('tel:3852544399','_blank') }>385-254-4399</span> </p>
                 </div>
 
               </Reveal>

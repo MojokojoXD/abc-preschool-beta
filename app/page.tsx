@@ -84,7 +84,7 @@ export default function Home()
           <div className='space-y-16 px-5 sm:px-0' id='__get-more-info'>
               <h1 className='text-4xl sm:text-5xl font-bold text-zinc-800 tracking-tight text-center sm:text-left'>Get In Touch</h1> 
             <Reveal className='space-y-8'  >
-              <p className='max-w-prose text-zinc-700 text-xl sm:text-2xl/7'>Please enter your information below and we&apos;ll get in touch at the earliest. </p>
+              <p className='max-w-prose text-zinc-700 text-xl sm:text-2xl/7'>Please enter your information below and we&apos;ll contact you shortly. </p>
               <ContactForm columns={ 'double' } />
             </Reveal>
           </div>
