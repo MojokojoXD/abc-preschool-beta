@@ -59,7 +59,7 @@ export function Reveal( { children, className }: RevealProps )
 
 
   return (
-    <div ref={ revealElementRef } className={ clsx( 'opacity-0 translate-y-[60px] transition-[opacity,translate] duration-[700ms,500ms] delay-300 ease-in-out overflow-hidden', className ) }>
+    <div ref={ revealElementRef } className={ clsx( 'opacity-0 translate-y-[60px] transition-[opacity,translate] duration-[700ms,500ms] delay-150 ease-in-out overflow-hidden', className ) }>
       { children }
     </div>
   )
