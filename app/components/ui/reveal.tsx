@@ -10,6 +10,8 @@ interface RevealProps extends HTMLAttributes<HTMLDivElement>
   delay?: number;
 }
 
+const MOBILE_SCREEN_WIDTH = 640;
+
 
 export function Reveal( { children, className }: RevealProps )
 {
@@ -22,10 +24,13 @@ export function Reveal( { children, className }: RevealProps )
     if ( typeof window === 'undefined' ) return;
     if ( typeof document === 'undefined' ) throw new Error( 'Component must be used in the browser' );
 
+
+    const screenThreshold = window.innerWidth < MOBILE_SCREEN_WIDTH ? 0.3 : 0.4
+
     const options: IntersectionObserverInit = {
       root: document.getElementById( '__main' ),
       rootMargin: '0px',
-      threshold: 0.45
+      threshold: screenThreshold
     };
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

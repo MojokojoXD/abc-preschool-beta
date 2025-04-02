@@ -1,3 +1,5 @@
+'use client'
+
 import { Smile, Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -66,7 +68,7 @@ export function Footer()
                   </div>
                 </li>
                 <li>
-                  <p className='text-zinc-500 underline'>inquires@abcbuildingblockspreschool.org</p>
+                  <p className='text-zinc-500'>inquires@abcbuildingblockspreschool.org</p>
                 </li>
                 <li>
                   <div className='flex items-center'>
@@ -75,7 +77,7 @@ export function Footer()
                   </div>
                 </li>
                 <li>
-                  <p className='text-zinc-500 underline'>385-254-4399</p>
+                  <p className='text-zinc-500 underline' onClick={() => window.open('tel:3852544399')}>385-254-4399</p>
                 </li>
               </ul>
             </div>

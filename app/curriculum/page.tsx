@@ -33,7 +33,7 @@ export default function Curriculum()
             <div className='bg-teal-400 py-14 px-8 sm:px-12 row-span-2 border-t-8 border-b-4 border-s-8 border-e-4 flex flex-col' id='__3-4'>
               <Reveal className='space-y-8'>
                 <h2 className='text-3xl sm:text-4xl font-bold text-center'>3 & 4</h2>
-                <p>Our 3/4 year old program focuses on foundational skill such as:</p>
+                <p>Our 3/4 year old program focuses on foundational skills such as:</p>
                 <ul className='space-y-8 list-inside'>
                   <li><CircleCheck className='inline mr-2.5' />Name recognition and writing</li>
                   <li><CircleCheck className='inline mr-2.5' />Color and Shape identification</li>
@@ -50,7 +50,7 @@ export default function Curriculum()
             <div className='pt-14 pb-40 px-8 sm:px-12 bg-primary/80 row-span-2 border-y-4 border-e-8 border-s-4' id='__4-5'>
               <Reveal className='space-y-8'>
                 <h2 className='text-3xl sm:text-4xl font-bold text-center'>4 & 5</h2>
-                <p>Our 4/5 year old program builds upon these foundations emphasizing:</p>
+                <p>Our 4/5 year old program builds upon these foundations listed in 3/4 year old program, emphasizing:</p>
                 <ul className='space-y-8 list-inside'>
                   <li><CircleCheck className='inline mr-2.5' />Advanced letter recognition and phonics</li>
                   <li><CircleCheck className='inline mr-2.5' />Word families and early reading(Bob Books)</li>
@@ -78,7 +78,6 @@ export default function Curriculum()
                     <li><CircleCheck className='inline mr-2.5' />Museum of Ancient Life at Thanksgiving Point</li>
                     <li><CircleCheck className='inline mr-2.5' />Orem Public Library</li>
                     <li><CircleCheck className='inline mr-2.5' />Local pet store and park</li>
-                    <li><CircleCheck className='inline mr-2.5' />Farm Country at Thanksgiving Point</li>
                   </ul>
                 </div>
                 <div className='space-y-4'>

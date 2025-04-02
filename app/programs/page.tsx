@@ -85,7 +85,7 @@ export default function Programs()
               {/* <h2 className='text-4xl font-bold'>4 & 5 <br /><span className='text-lg'>(One year prior to kindergarten)</span></h2> */}
               <p>* The registration fee includes:</p>
               <ul className='space-y-8 list-inside'>
-                <li><CircleCheck className='inline mr-2.5' /> A comprehensive portfolio of your child&apos;s work</li>
+                <li><CircleCheck className='inline mr-2.5' /> A comprehensive binder of your child&apos;s work</li>
                 <li><CircleCheck className='inline mr-2.5' />Documentation of your child&apos;s learning progression</li>
                 <li><CircleCheck className='inline mr-2.5' /> A collection of photographs capturing your child&apos;s experiences throughout the academic year</li>
                 <li><CircleCheck className='inline mr-2.5' />All necessary school supplies</li>
