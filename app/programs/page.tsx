@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/button';
 import { CircleCheck } from 'lucide-react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Reveal } from '@/components/ui/reveal';
-
+import Image from 'next/image';
+import binder from '../../public/assets/programs/binder.jpg'
 
 export default function Programs()
 {
@@ -35,7 +36,7 @@ export default function Programs()
       </header>
       <div className='px-1 sm:px-16 lg:px-24 xl:px-56 space-y-16 text-zinc-700'>
 
-        <div className='grid sm:grid-cols-3 auto-row-max gap-5 bg-white py-20 sm:p-28 px-5 pb-40 shadow-sm'>
+        <div className='grid sm:grid-cols-3 auto-row-max gap-5 sm:gap-y-10 bg-white py-20 sm:p-28 px-5 pb-40 shadow-sm'>
           <div id='__3-4program'>
             <Reveal className='h-full'>
               <div className='h-full space-y-8 text-2xl bg-teal-400 rounded-3xl py-14 px-12 text-center flex flex-col justify-between' >
@@ -81,6 +82,7 @@ export default function Programs()
             </Reveal>
           </div>
           <Reveal>
+
             <div className='space-y-8 text-xl sm:text-2xl py-14 px-12'>
               {/* <h2 className='text-4xl font-bold'>4 & 5 <br /><span className='text-lg'>(One year prior to kindergarten)</span></h2> */}
               <p>* The registration fee includes:</p>
@@ -92,7 +94,13 @@ export default function Programs()
               </ul>
             </div>
           </Reveal>
+          <div className='col-span-full flex justify-center w-full'>
+            <Reveal >
+              <Image src={ binder } alt='program binder' height={ 700 } width={ 700 } className='object-fit'/>
+            </Reveal>
+          </div>
         </div>
+      
       </div>
     </div>
   );

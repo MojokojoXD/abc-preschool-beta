@@ -68,7 +68,7 @@ export function Footer()
                   </div>
                 </li>
                 <li>
-                  <p className='text-zinc-500 underline cursor-pointer' onClick={ () => window.open('mailto:inquires@abcbuildingblockspreschool.org','_blank')}>inquires@abcbuildingblockspreschool.org</p>
+                  <p className='text-zinc-500 underline cursor-pointer' onClick={ () => window.open('mailto:inquires@abcbuildingblockspreschool.org','_blank')}>inquiries@abcbuildingblockspreschool.org</p>
                 </li>
                 <li>
                   <div className='flex items-center'>
